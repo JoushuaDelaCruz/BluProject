@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "server": "npm run build && node dist/index.js",
+    "server": "npm run build && nodemon dist/index.js",
     "client": "npm run dev --prefix ../client",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"" 
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "proxy": "http://localhost:5000",
   "keywords": [],
@@ -16,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.15.12",
+    "nodemon": "^2.0.22",
     "typescript": "^5.0.4"
   },
   "dependencies": {
